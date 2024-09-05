@@ -8,7 +8,7 @@ public class Ex1_Var01 {
 		System.out.println(a);
 		
 		int b = 20;
-		System.out.println(a);
+		System.out.println(b);
 	}
 
 }
