@@ -7,7 +7,7 @@ public class Ex3_Oper {
 		int n3 = 2;
 		int res = n1 + n2 * n3;
 		System.out.println(res);
-		
+		// 	code here : ()우선 순위를 조정
 		int res2 = (n1 + n2) * n3;
 		System.out.println(res2);
 		
