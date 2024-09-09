@@ -3,32 +3,25 @@ package ex2;
 public class Ex2_Challenge {
 	public static void main(String[] args) {
 		
-		int num = 3;
+		int num = (int)(((Math.random()*12)+1));
+		System.out.println(num + "[월]");
 		
 		switch (num) {
-		case 1: {
+		case 1,2,3: 
 			System.out.println("봄 입니다.");
 			break;
 			
-		case 2: {
+		case 4,5,6: 
 			System.out.println("여름 입니다.");
 			break;
 			
-		case 3: {
+		case 7,8,9: 
 			System.out.println("가을 입니다.");
 			break;
-			
-		case 4: {
-			System.out.println("겨울 입니다.");
-			break;
-			
-		}
-		default:
-			throw new IllegalArgumentException("Unexpected value: " + num);
-		}
-		}
-
-		}
 		
-	
+		case 10,11,12: 
+			System.out.println("겨울 입니다.");
+		
 		}
+	}
+}
