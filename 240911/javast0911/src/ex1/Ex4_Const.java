@@ -1,12 +1,14 @@
 package ex1;
+//메서드에서 this의 의믜와 같다
+//생성자 목적 : 현재 객체를 생성할 때 초기화 하는 목적
 
 public class Ex4_Const {
-
+	//자원을 초기화
 	private int num;
 	private String name;
 	private int age;
 	private String typev;
-
+	//기본 생성자로 초기화
 	public Ex4_Const() {
 		num = 1;
 		name = "김길동";
@@ -35,6 +37,7 @@ public class Ex4_Const {
 		System.out.println("age : " + age);
 		System.out.println("typev : " + typev);
 	}
+	//다른 클래스의 메인
 	public static void main(String[] args) {
 		Ex4_Const ref = new Ex4_Const();
 		System.out.println("=================");
