@@ -1,5 +1,6 @@
 package ex1;
-
+//추상메서드(강제구현=재정의강제)를 가진 추상클래스 즉 부모를 상속받은
+//자식은 반드시 추상메서드를 재정의 해야 한다.
 public class Ex2_AbstractSub extends Ex2_AbstractSuper {
 
 	@Override

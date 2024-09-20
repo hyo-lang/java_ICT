@@ -9,6 +9,7 @@ public class Ex1_Sub extends ExSuper{
 
 	@Override
 	public void work(int pay) {
+		//부모의 자원을 호출하면서 부모의 맴버필드인 pay에 값을 저장시킨다.
 		insertPay(pay);
 	}
 
