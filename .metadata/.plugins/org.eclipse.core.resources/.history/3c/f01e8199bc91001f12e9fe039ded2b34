@@ -1,0 +1,11 @@
+out.println("<!DOCTYPE html>");
+out.println("<html>");
+out.println("<head>");
+out.println("<meta charset="EUC-KR">");
+out.println("<title>");Insert title here("</title>");
+out.println("</head>");
+out.println("<body>");
+	out.println("<h3 style=\"color: red\">정상적인 요청이 아닙니다.</h3>");
+	out.println("<a href=\"index.jsp\">메인으로 가기("</a>");
+out.println("</body>");
+out.println("</html>");

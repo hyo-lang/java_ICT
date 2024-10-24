@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3 style="color: red">정상적인 요청이 아닙니다.</h3>
+	<a href="index.jsp">메인으로 가기</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+package model;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import controler.ActionFoward;
+import vo.MyProfile;
+
+public class MyProfileAction implements Action{
+
+	@Override
+	public ActionFoward execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		MyProfile vo = new MyProfile();
+		vo.setName("Á¤È¿Áø");
+		vo.setAge(30);
+		vo.getPhone("010-7572-2217")
+		
+		return null;
+	}
+
+}

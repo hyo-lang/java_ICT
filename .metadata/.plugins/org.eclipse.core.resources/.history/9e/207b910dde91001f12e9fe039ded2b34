@@ -1,0 +1,33 @@
+package ex1;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.tomcat.jdbc.naming.GenericNamingResourcesFactory;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+@WebServlet("/Ex1HelloDiDemo")
+public class Ex1HelloDiDemo extends HttpServlet {
+	
+	private static final long serialVersionUID = 1L;
+	// ½ºÇÁ¸µ Container
+	private ApplicationContext ctx;
+    public Ex1HelloDiDemo() {
+    	ctx = new GenericXmlApplicationContext("ex1/ex1.xml")
+    }
+    @Override
+    public void init() throws ServletException {
+
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+}

@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>A페이지</h1>
+	<%--inculde 지시자를 사용 --%>
+	<%@include file="B.jsp" %>
+</body>
+</html>

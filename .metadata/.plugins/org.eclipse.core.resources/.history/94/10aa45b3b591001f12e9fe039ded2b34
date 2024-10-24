@@ -1,0 +1,20 @@
+package model;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import controler.ActionFoward;
+
+// 어떤 모델을 정의 할 것인가
+// 요청이 //main.ict?cmd=hello 동작하는 모델
+public class HelloAction implements Action{
+
+	@Override
+	public ActionFoward execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		
+		return new ActionFoward("hello", false);
+	}
+
+}

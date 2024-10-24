@@ -1,0 +1,11 @@
+package ex1;
+//스프링이 관리할 객체
+public class HelloBeen {
+	//자원
+	private String msg;
+	//싀프링에게 DI받을 메서드
+	public void setMsg(String msg) {
+		this.msg = msg;
+	}
+	//======================================================
+}

@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Model2 Page</h1>
+<ol>
+<li>ActionFowerd : 모델이 실행하고 난 후 view이름, 이동방식을 가지고 있는 클래스</li>
+<il>Action interface 제작 : 추상메서드로 서블릿 -> Factory -> Model 구현해햐하는 추상메서드
+매개변수가, request, response를 받아야한다. 컨트롤서블릿에게 호출된 후 반환되는 ActionFowerd 정의
+ActionFowerd execute(req, rest) throws~;
+</il>
+</ol>
+</body>
+</html>
