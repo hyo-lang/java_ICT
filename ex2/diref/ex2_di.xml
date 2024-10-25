@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 의존관계가 해당되는 객체를 빈으로 등록 -->
+	<bean id="mysource" class="ex2.diref.MySource">
+		<constructor-arg value="점심시간 코드입니다."/>
+	</bean>
+	<!--  DI관계 ref속성으로  -->
+	<bean id="makeSource" class="ex2.diref.MakeSouce">
+		<property name="source" ref="mysource"/>
+	</bean>
+</beans>

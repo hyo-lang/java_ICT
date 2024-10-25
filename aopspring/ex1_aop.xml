@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+<!-- AOP설정 스프링편 : 개념만 이해하고 연습 X -->
+<context:annotation-config/>
+<!-- Advice를 빈으로 등록한다. -->
+<bean id="checkAdvice" class="aopspring.CheckAdvice"/>
+<!-- Aop Bean 설정하기  -->
+<aop:config>
+	<!--  ref속성으로 이미 만들어 둔 Advice를 DI한다. -->
+			<!-- pointcut을 지정해서 first()계열을 적용 시키기
+			카페에 execution에 적용할 AspectJ표기법 참고 
+			- 여기서는 모든 반환형에 aopspring패키지 안에 DaoImple클래스 안에
+			- 존재하는 first로 시작하면서 인자가 없거나 하나이상인 메서드를 선택함 
+		 -->
+	<aop:aspect id="time" ref="checkAdvice">
+		<aop:pointcut expression="execution(* aopspring.DaoImple.first*(..))" id="firstP"/>
+		<aop:around method="checkTime" pointcut-ref="firstP"/>
+	</aop:aspect>
+</aop:config>
+<!-- Target -->
+<bean id="dao" class="aopspring.DaoImple"/>
+</beans>

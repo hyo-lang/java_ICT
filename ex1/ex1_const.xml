@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<!-- 스프링의 빈의 value는 모두 String이 우선순위를 가진다.
+	 만약 다른 자료형을 선택 type 
+ -->
+	<bean id="ex1" class="ex1.Ex1_Const">
+		<constructor-arg type="int" value="8000"/>
+	</bean>
+	<!-- 한번해보기 id="ex2" public Ex1_Const(int num, String code) -->
+	<bean id="ex2" class="ex1.Ex1_Const">
+			<constructor-arg value="1000" />
+			<constructor-arg value="테스형" />
+	</bean>
+	<!-- Collection -->
+	<bean id="list" class="ex1.Ex2_ListDemo">
+		<!-- stlist.add("문자열들"); -->
+		<property name="stlist">
+			<list>
+				<value>Ict  </value>
+				<value>Ict  스프링 학습입니다</value>
+				<value>Ict  이제 파이썬이 기다리네요</value>
+			</list>
+		</property>
+
+	</bean>
+</beans>

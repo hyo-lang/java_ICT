@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
+
+	<bean id="res1" name="resn1" class="ex2.resource.Ex1_MyResource">
+		<qualifier value="bb" />
+		<property name="conts" value="안녕하세요1" />
+	</bean>
+	<bean id="res2"  name="resn2"  class="ex2.resource.Ex1_MyResource">
+		<property name="conts" value="안녕하세요2" />
+	</bean>
+	<bean id="ex1_res" class="ex2.resource.Ex1_Resource">
+		<!-- <property name="res" ref="res1"/> -->
+	</bean>
+
+</beans>
